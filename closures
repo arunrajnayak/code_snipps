@@ -1,0 +1,21 @@
+/*Closure #1*/
+var a = "global variable";
+var F = function () {
+		var b = "local variable";
+		var N = function () {
+			var c = "inner local";
+			return b;
+		};
+	return N;
+};
+
+
+/*Closure #2*/
+var inner; 
+var F = function () {
+	var b = "local variable";
+	var N = function () {
+		return b;
+	};
+	inner = N;
+};
